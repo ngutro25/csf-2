@@ -10,13 +10,16 @@
 # print the answers to all the problems.
 
 import math                     # makes the math.sqrt function available
+import hw1_test
+import subprocess
 
+answers = []
 
 ###
 ### Problem 1
 ###
 
-print "Problem 1 solution follows:"
+print "\nProblem 1 solution follows:"
 
 # Quadratic Values
 
@@ -28,23 +31,17 @@ quadC = 8.5408
 def quadratic(a, b, c):
 	quadFirstAnswer = ((-b) + math.sqrt((b**2) - 4 * a * c )) / 2 * a
 	quadSecondAnswer = ((-b) - math.sqrt((b**2) - 4 * a * c )) / 2 * a
-	print "The first root is: "
-	print quadFirstAnswer
-	print "The second root is: "
-	print quadSecondAnswer
+	print 'The first root is: ' + str(quadFirstAnswer) + '\nThe second root is: ' + str(quadSecondAnswer)
+	answers.append(quadFirstAnswer)
+	answers.append(quadSecondAnswer)
 	
-
 quadratic(quadA, quadB, quadC)
 
 ###
 ### Problem 2
 ###
 
-print "Problem 2 solution follows:"
-
-import hw1_test
-
-
+print "\nProblem 2 solution follows:"
 
 a = hw1_test.a    # Setting the variables to something easier to type
 b = hw1_test.b
@@ -53,22 +50,35 @@ d = hw1_test.d
 e = hw1_test.e
 f = hw1_test.f
 
-print str(a)
-print str(b)
-print str(c)
-print str(d)
-print str(e)
-print str(f)
+probTwoList = [a, b, c, d, e, f]
 
-
+for i in probTwoList:
+    print i
+    answers.append(i)
 
 ###
 ### Problem 3
 ###
 
-print "Problem 3 solution follows:"
+print "\nProblem 3 solution follows:"
 
-print str((a and b) or (not c) and not (d or e or f))
+problemThreeAns = ((a and b) or (not c) and not (d or e or f))
+print str(problemThreeAns)
+
+answers.append(problemThreeAns)
+
+###
+### Problem 4
+###
+
+# Opens or creates a new text file and places each answer into it on a new line
+fo = open('csf/homework 1/outputs.txt', 'wb')
+for i in answers:
+    fo.write(str(i))
+    fo.write('\n')
+fo.close
+
+subprocess.Popen('diff outputs.txt answers.txt')
 
 ###
 ### Collaboration

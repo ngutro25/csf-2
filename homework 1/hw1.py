@@ -11,9 +11,9 @@
 
 import math                     # makes the math.sqrt function available
 import hw1_test
-import subprocess
+import subprocess				# imported this to try and work on bash scripts
 
-answers = []
+answers = []					# this list exists to export answers to a text file
 
 ###
 ### Problem 1
@@ -32,6 +32,8 @@ def quadratic(a, b, c):
 	quadFirstAnswer = ((-b) + math.sqrt((b**2) - 4 * a * c )) / 2 * a
 	quadSecondAnswer = ((-b) - math.sqrt((b**2) - 4 * a * c )) / 2 * a
 	print 'The first root is: ' + str(quadFirstAnswer) + '\nThe second root is: ' + str(quadSecondAnswer)
+
+	# throw the answers into the list
 	answers.append(quadFirstAnswer)
 	answers.append(quadSecondAnswer)
 	
@@ -71,14 +73,15 @@ answers.append(problemThreeAns)
 ### Problem 4
 ###
 
-# Opens or creates a new text file and places each answer into it on a new line
-fo = open('csf/homework 1/outputs.txt', 'wb')
-for i in answers:
-    fo.write(str(i))
-    fo.write('\n')
-fo.close
+# Opens or creates a new text file and places each answer into it on a new line (Not working)
+# fo = open('csf/homework 1/outputs.txt', 'wb')
+# for i in answers:
+#    fo.write(str(i))
+#    fo.write('\n')
+#fo.close
 
-subprocess.Popen('diff outputs.txt answers.txt')
+# tried to work with the bash 'diff' command, but wasn't having much luck
+# subprocess.call('diff outputs.txt answers.txt')
 
 ###
 ### Collaboration

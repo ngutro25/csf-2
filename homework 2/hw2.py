@@ -9,7 +9,7 @@
 # you are done.  When you are done, running this file should compute and
 # print the answers to all the problems.
 
-n = 1
+from hw2_test import n
 
 
 ###
@@ -19,9 +19,13 @@ n = 1
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 1 solution follows:"
 
+answer = 0
+i = 1
 
-
-
+while i <= 100:
+	answer = answer + i
+	i += 1
+	print answer
 
 ###
 ### Problem 2
@@ -43,8 +47,8 @@ print "Problem 3 solution follows:"
 
 n = 10
 triangular = 0
-for i in ...:
-    triangular = ...
+for i in range(triangular, n + 1):    # Adding 1 b/c we start at 0
+    triangular = triangular + i
 print "Triangular number", n, "via loop:", triangular
 print "Triangular number", n, "via formula:", n*(n+1)/2
 

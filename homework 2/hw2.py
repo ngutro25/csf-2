@@ -9,6 +9,7 @@
 # you are done.  When you are done, running this file should compute and
 # print the answers to all the problems.
 
+from math import factorial
 from hw2_test import n
 
 
@@ -22,10 +23,11 @@ print "Problem 1 solution follows:"
 answer = 0
 i = 1
 
-while i <= 100:
+while i <= n:
 	answer = answer + i
 	i += 1
 	print answer
+
 
 ###
 ### Problem 2
@@ -47,10 +49,11 @@ print "Problem 3 solution follows:"
 
 n = 10
 triangular = 0
-for i in range(triangular, n + 1):    # Adding 1 b/c we start at 0
+for i in range(triangular, n + 1):    # Adding 1 because we start at 0
     triangular = triangular + i
 print "Triangular number", n, "via loop:", triangular
-print "Triangular number", n, "via formula:", n*(n+1)/2
+print "Triangular number", n, "via formula:", n * (n + 1) / 2
+
 
 ###
 ### Problem 4
@@ -59,16 +62,26 @@ print "Triangular number", n, "via formula:", n*(n+1)/2
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 4 solution follows:"
 
-# ... write your code and comments here (and remove this line)
+n = 10
+fact = 0
+for i in range(fact, n):
+    fact = fact * i
+    fact += 1
+    print fact
 
-###
+
+### 
 ### Problem 5
 ###
 
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 5 solution follows:"
 
-# ... write your code and comments here (and remove this line)
+numlines = 10
+while numlines >= 1:
+    print factorial(numlines)
+    numlines -= 1
+
 
 ###
 ### Problem 6
@@ -77,7 +90,16 @@ print "Problem 5 solution follows:"
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 6 solution follows:"
 
-# ... write your code and comments here (and remove this line)
+recInput = 1
+recOutput = 1
+
+# This should be easy, but I'm an idiot
+
+while recInput <= 10:
+    recOutput = recOutput + (1 // factorial(recInput))
+    print recOutput
+    recInput += 1
+
 
 ###
 ### Collaboration

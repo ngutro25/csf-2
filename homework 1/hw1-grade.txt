@@ -1,0 +1,8 @@
+Grader Name: Maggie Aaron
+Evergreen Login: aarmag22
+
+3/3
+
+All imports at the top is helpful.
+I like that you added, 'The first root is: ' for problem 1 solutions.
+Good white space, very readable.

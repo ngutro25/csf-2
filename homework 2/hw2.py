@@ -62,12 +62,19 @@ print "Triangular number", n, "via formula:", n * (n + 1) / 2
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 4 solution follows:"
 
+<<<<<<< HEAD
 n = 10
 fact = 0
 for i in range(fact, n):
     fact = fact * i
     fact += 1
     print fact
+=======
+answer = 1
+for i in range(1, n+1):
+	answer *= i
+	print answer
+>>>>>>> all finished up~
 
 
 ### 
@@ -78,9 +85,20 @@ for i in range(fact, n):
 print "Problem 5 solution follows:"
 
 numlines = 10
+<<<<<<< HEAD
 while numlines >= 1:
     print factorial(numlines)
     numlines -= 1
+=======
+answer = 1
+i = numlines
+while i > 0:
+	for j in range(0, i):
+		answer *= i - j
+	print answer
+	answer = 1
+	i -= 1
+>>>>>>> all finished up~
 
 
 ###
@@ -90,6 +108,7 @@ while numlines >= 1:
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 6 solution follows:"
 
+<<<<<<< HEAD
 recInput = 1
 recOutput = 1
 
@@ -100,18 +119,26 @@ while recInput <= 10:
     print recOutput
     recInput += 1
 
+=======
+eulersNightmare = 1
+for i in range(1, 10):
+	fact = 1
+	for j in range(0, i):
+		fact *= i - j
+	eulersNightmare += 1 / float(fact)
+print eulersNightmare
+>>>>>>> all finished up~
 
 ###
 ### Collaboration
 ###
 
-# ... List your collaborators and other sources of help here (websites, books, etc.),
-# ... as a comment (on a line starting with "#").
+# Totally got help on this one from Royce. (jenroy30)
 
 ###
 ### Reflection
 ###
 
-# ... Write how long this assignment took you, including doing all the readings
-# ... and tutorials linked to from the homework page. Did the readings, tutorials,
-# ... and lecture contain everything you needed to complete this assignment?
+# I feel pretty inexperienced doing any loops that are math-related like this. I had to get
+# help from Royce; some of the later problems were throwing me for a loop. I probably spent
+# a couple hours in total on this assignment. Today's lecture helped a bit with the loops, too. 

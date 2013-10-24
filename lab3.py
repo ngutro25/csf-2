@@ -1,10 +1,10 @@
 n = 6
-series = 'sum'
+series = 'fibonacci'
 a,b = 1,1
 
 def fibonacci(n):
     a,b = 1,1
-    for i in range (n-1):
+    for i in range (n-2): # Starting 0 + 1 = 1, 1 + 1 = 2...
         a,b = b, a+b
     return a
 

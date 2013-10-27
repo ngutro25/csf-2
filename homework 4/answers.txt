@@ -1,0 +1,99 @@
+Name: Tyler Logan
+Evergreen Login: logtyl02
+Computer Science Foundations
+Programming as a Way of Life
+Fall 2013
+Homework 3 
+
+For each problem that requires a written answer, write (or copy-and-paste)
+your answers in this file.  When you are done, you should have replaced all
+the ellipses (the three dots) with your answers.
+
+At the end, you will turn in this file along with your modified
+dna_analysis.py program.
+
+
+Problem 1:
+
+(No answers in this file.)
+
+Problem 2:
+
+# GC-content: 0.43029262963 # Turns out this was incorrect because I was calculating the content with the total count
+
+Corrected GC-content: 0.430599870611
+
+Problem 3:
+
+After commenting out the two lines and re-running the program, Python throws an exception, "NameError: name 'linenum is not defined." Because we commented out the declaration linenum = 0, when the program later needs to refer to, or change this variable, it can't find it.
+
+If we comment out gc_count = 0, the program would run through the first part, where it counts the total bp's, but then throw a NameError when it goes to the next part which requires gc_count to be defined. This is a difference between interpreted languages like Python, and a compiled language like C++. C++ would probably throw an error on compilation, rather than execution, but Python doesn't read the code the whole way through, and so only errors when it hits a stumbling block.
+
+Problem 4:
+
+Manual (for test-small.fastq):
+
+	A count: 5
+	T count: 2
+	G count: 1
+	C count: 2
+	AT: 7
+	GC: 3
+	total count: 10
+	GC-content: 0.3
+	AT-content: 0.7
+
+sample_1.fastq, via the script:
+
+# Correcting these w/ updated script, using sum count to calculate, rather than total count
+    GC-content: 0.430599870611
+    AT-content: 0.569400129389
+
+Problem 5:
+
+	G Count: 5738773
+	C Count: 5879128
+	A Count: 7701287
+	T Count: 7661547
+
+Problem 6:
+
+	All but the test-small.fastq file have different values for their sum count and total count. A quick look at some of these files shows a few characters in the sequence that aren't A, T, G, or C. There are a few 'N's. These will be added to the total count and length variables. We should use the sum count variable when calculating GC or AT content, for complete accuracy.
+
+Problem 7:
+
+	0.7 / 0.3
+
+Via Calculator:
+	AT/GC Ratio: 2.33333333 ...
+
+Via Script:
+	AT/GC Ratio: 2.33333333 ...
+
+	The same, as I expected.
+
+Problem 8:
+
+sample_1.fastq:
+
+	GC Classification: Moderate GC Content
+
+Collaboration:
+
+For the HW3 part, I did this one entirely on my own. The instructions and exisiting code were enough.
+I used WolframAlpha to compute the gc and at content manually.
+
+For the HW4 part, I had a little help bouncing ideas off various classmates in lab. The code was all done myself.
+
+Reflection:
+
+I enjoyed this assignment. Parsing data like this is relevant to many fields, including game programming (which I'm interested in), where one could use techniques like this to get vertex information from a 3d model in order to draw it to the screen.
+
+Something I learned from this assignment is that casting the first input of a math operation as a float will return the answer as a float.
+
+I think that some extra (garbage?) letters / data in the files, is causing the content to be slightly off from the expected results.
+	Edit: Yes, turns out this was true. Using the sum count value rather than the total count value fixed this.
+
+This program is SLOW! It takes about a minute for it to parse a large file on my computer. I have a pretty quick CPU, as well.
+I'm currently installing the framework to use the pyOpenCL module to see if I can get my GPU to do the heavy lifting.
+I'm a huge nerd because of this. (Also it's kind of a pain pyOpenCL working on Windows. Kinda expected that, actually.)

@@ -1,0 +1,2 @@
+# Twitter Haiku Generator
+# Put project proposal here

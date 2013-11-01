@@ -1,2 +1,49 @@
+# PROPOSAL NOT FINISHED
+
 # Twitter Haiku Generator
-# Put project proposal here
+
+# Pull incoming public tweets from the Twitter stream / firehose
+#   Either randomly, or with a set of data that determines appropriateness (hashtags, keywords, or what
+#   have you, pull words and generate pseudohaiku with them.
+
+# Pseudohaiku = Fits the mechanical form of haiku, correct syllable count per line, correct number of lines.
+#   Does not necessarily fit the other requirements for haiku. (Nature word, cutting word, meaning)
+
+# Ambitious goal, perhaps outside of the scope of this project currently: Fulfill the other requirements to
+#   make more legitamite haiku. This might involve some machine learning stuff. This is for later.
+
+# Also possible, but maybe for later: Feed the generated haiku into a website using web2py or Django. Allow
+#   users to up or downvote haiku. Keep track of most popular haiku. This data can later be used for data
+#   mining, trend tracking, or machine learning.
+
+# Very ambitious, totally for later. Use vote data to teach the program to generate better haiku.
+
+
+
+# Syllable count could be given to the program through a database. This might require restricting the scope
+#   of words the program will find and use.
+# Could write an algorithm to determine syllable length of a word, and provide a percentage of confidence
+#   the length is correct. Ambiguous syllable counts will be discarded, or left later for manual
+#   diambigutation or machine learning stuff.
+
+# ( WEBSITE STUFF. TOTALLY FOR LATER. PROBABLY OUTSIDE THE SCOPE OF THE PROJECT FOR TIME LIMITATIONS )
+# Data mining / trend stuff: Track popularity of haiku, certain words, word combinations, nature words, etc.
+#   Maybe have a 'share' to Twitter button. Track shared haiku. If possible track the haiku itself ON twitter
+#   and watch retweet trends.
+
+# Track users for excessive voting behavior. Implement restrictions, banlists, etc.
+# PHP backend, might have Royce do that for me. Can use my own website. Hosted on Royce's lineode.
+
+# If the website goes up, a small terms of use might be in order. Have to check Twitter's terms to see
+#   what, if any, intellectual property stuff is involved with me using words from random users. 
+#   It's probably safe as long as I don't use phrases.
+
+# The poems will be open for inspiration / maybe modification, but there will a request / plea to artistic
+#   integrity to not claim the poems as your own. (This may be wishful thinking that the program could
+#   generate anything someone might want to steal.
+
+# OPEN SOURCE! COMMUNITY DRIVEN! MINDFULNESS FOR THE DIGITAL ERA! FREE DATA AND POETRY FOR EVERYBODY!
+
+
+
+# Put project proposal here (Official, essay proposal to come soon)

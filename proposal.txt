@@ -1,3 +1,10 @@
+This script will operate in two modes: vanilla, and Twitter. The vanilla mode will accept a text file, strip lines
+and words from those lines, count syllables for each word, and attempt to create a pseudo-haiku from them.
+There will be 3 haiku styles: 3/5/3 syllable count, 5/7/5 syllable count, and a free format which will have lines
+of varying length, but will maintain a total syllable count of 17 or less. This format is based on the 'American Haiku'
+format postulated by Jack Kerouac.
+
+
 # PROPOSAL NOT FINISHED
 
 # Twitter Haiku Generator

@@ -1,7 +1,9 @@
-Name: ...
-UW NetID: ...
-CSE 140
-Homework 3: Election prediction
+# Name: Tyler Logan
+# Evergreen Login: Logtyl02
+# Programming as a Way of Life
+# Homework 5: Election prediction
+
+test_state_edges passes
 
 
 Collaboration:

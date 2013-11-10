@@ -29,6 +29,7 @@ def test_row_to_edge():
 
 def test_state_edges():
     rows1 = [{'State': 'WA', 'Dem': '1.0', 'Rep': '0.1'}]
+    print state_edges(rows1)
     assert state_edges(rows1) == {'WA': 0.9}
 
     rows2 = [{'State': 'WA', 'Dem': '1.0', 'Rep': '0.1'},
@@ -216,7 +217,7 @@ if __name__ == "__main__":
     test_read_csv()
     test_row_to_edge()
     test_state_edges()
-    test_earlier_date()
+    #test_earlier_date()
     #test_most_recent_poll_row()
     #test_unique_column_values()
     #test_pollster_predictions()
@@ -224,10 +225,10 @@ if __name__ == "__main__":
     #test_pollster_errors()
     #test_pivot_nested_dict()
     #test_weighted_average()
-    test_pollster_to_weight()
-    test_average_error_to_weight()
+    #test_pollster_to_weight()
+    #test_average_error_to_weight()
     #test_average_edge()
     #test_predict_state_edges()
-    test_electoral_college_outcome()
+    #test_electoral_college_outcome()
 
     print "Tests passed."

@@ -4,11 +4,11 @@
 # Homework 5: Election prediction
 
 test_state_edges passes
-
+test_most_recent_poll_row passes
 
 Collaboration:
 
-...
+	Sailor Jerry
 
 Reflection:
 

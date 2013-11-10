@@ -51,23 +51,18 @@ def earlier_date(date1, date2):
     return (time.strptime(date1, "%b %d %Y") < time.strptime(date2, "%b %d %Y"))
 
 def most_recent_poll_row(poll_rows, pollster, state):
-	#for index in range(len(poll_rows)):
-		# print index, poll_rows1[index]['Date']
-		#if earlier_date(poll_rows[index]['Date'], poll_rows[index]['Date']):
-		#	print poll_rows[index]['Date']
-		#else:
-		#	print 'No'
-	recentdate = None
-	datelist = []
-	for index in range(len(poll_rows)):
-		if poll_rows[index]['State'] == state and poll_rows[index]['Pollster'] == pollster:
-			datelist.append(poll_rows[index]['Date'])
-	print datelist
-	while len(datelist) > 1:
-		if not earlier_date(datelist[0], datelist[1]):
-			datelist.remove(datelist[0])
-		else:
-			print 'Boo'
+    """
+    Given a list of poll data rows, returns the most recent row with the
+    specified pollster and state. If no such row exists, returns None.
+    """
+    output = None
+    for i in range(len(poll_rows)):
+        if poll_rows[i]['Pollster'] == pollster and poll_rows[i]['State'] == state:
+            output = poll_rows[i]
+            if earlier_date(poll_rows[i]['Date'], output['Date']):
+                output = poll_rows[i]
+
+    return output
 
 def test_most_recent_poll_row():
     assert most_recent_poll_row(poll_rows1, "A", "OR") == {"ID":4, "State":"OR", "Pollster":"A", "Date":"Feb 10 2010"}
@@ -89,4 +84,8 @@ def test_most_recent_poll_row():
 	#if earlier_date(poll_rows1[index]['Date'], poll_rows1[index]['Date']):
 	#	print poll_rows1[index]['Date']
 
-most_recent_poll_row(poll_rows1, 'B', 'WA')
+if most_recent_poll_row(poll_rows1, "A", "OR") == {"ID":4, "State":"OR", "Pollster":"A", "Date":"Feb 10 2010"}:
+	print 'True'
+print most_recent_poll_row(poll_rows1, "A", "WA")
+print most_recent_poll_row(poll_rows1, "B", "WA")
+print test_most_recent_poll_row()

@@ -60,9 +60,14 @@ def most_recent_poll_row(poll_rows, pollster, state):
     Given a list of poll data rows, returns the most recent row with the
     specified pollster and state. If no such row exists, returns None.
     """
+    output = None
     for i in range(len(poll_rows)):
-        if pollster[i]['']
-    earlier_date()
+        if poll_rows[i]['Pollster'] == pollster and poll_rows[i]['State'] == state:
+            output = poll_rows[i]
+            if earlier_date(poll_rows[i]['Date'], output['Date']):
+                output = poll_rows[i]
+
+    return output
 
 
 ################################################################################

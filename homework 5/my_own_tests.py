@@ -43,6 +43,31 @@ poll_rows1 = [{"ID":1, "State":"WA", "Pollster":"A", "Date":"Jan 07 2010"},
               {"ID":5, "State":"WA", "Pollster":"B", "Date":"Feb 10 2010"},
               {"ID":6, "State":"WA", "Pollster":"B", "Date":"Mar 22 2010"}]
 
+
+def unique_column_values(rows, column_name):
+    """
+    Given a list of rows and the name of a column (a string), returns a set
+    containing all values in that column.
+    """
+    column_list=[]
+    for i in rows:
+        column_list.append(row[column_name])
+    
+    output=set(column_list)
+    
+    print output
+    return output
+
+unique_column_values(poll_rows1, 'State')
+
+def test_unique_column_values():
+    assert unique_column_values(poll_rows1, "ID") == { 1, 2, 3, 4, 5, 6 }
+    assert unique_column_values(poll_rows1, "State") == { "WA", "OR" }
+    assert unique_column_values(poll_rows1, "Pollster") == { "A", "B" }
+    assert unique_column_values(poll_rows1, "Date") == { "Jan 07 2010", "Jan 08 2010", "Feb 10 2010", "Mar 21 2010", "Mar 22 2010" }
+
+#test_unique_column_values()
+
 def earlier_date(date1, date2):
     """
     Given two dates as strings (formatted like "Oct 06 2012"), returns True if 
@@ -84,8 +109,3 @@ def test_most_recent_poll_row():
 	#if earlier_date(poll_rows1[index]['Date'], poll_rows1[index]['Date']):
 	#	print poll_rows1[index]['Date']
 
-if most_recent_poll_row(poll_rows1, "A", "OR") == {"ID":4, "State":"OR", "Pollster":"A", "Date":"Feb 10 2010"}:
-	print 'True'
-print most_recent_poll_row(poll_rows1, "A", "WA")
-print most_recent_poll_row(poll_rows1, "B", "WA")
-print test_most_recent_poll_row()

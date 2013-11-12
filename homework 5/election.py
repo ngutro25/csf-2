@@ -85,14 +85,18 @@ def unique_column_values(rows, column_name):
 
     output = set(column_list)
     return output
-    
+
 def pollster_predictions(poll_rows):
     """
     Given a list of poll data rows, returns pollster predictions.
     """
-    #TODO: Implement this function
-    pass
+    
+    # I give up. I've been working on this for way more than 6 hours. I'm not sure if it's the structure of the assignment (having not planned out and implemented which functions to use and
+    #   which to not use / which to consolidate), or if it's me being impatient and sick. The really deeply nested stuff is throwing me off. I wonder if doing it all with classes would help.
+    #   I think it would, but I'm not going to mess with that.
+    
 
+    
             
 ################################################################################
 # Problem 4: Pollster errors

@@ -29,7 +29,6 @@ def test_row_to_edge():
 
 def test_state_edges():
     rows1 = [{'State': 'WA', 'Dem': '1.0', 'Rep': '0.1'}]
-    print state_edges(rows1)
     assert state_edges(rows1) == {'WA': 0.9}
 
     rows2 = [{'State': 'WA', 'Dem': '1.0', 'Rep': '0.1'},
@@ -220,7 +219,7 @@ if __name__ == "__main__":
     test_earlier_date()
     test_most_recent_poll_row()
     test_unique_column_values()
-    #test_pollster_predictions()
+    test_pollster_predictions()
     #test_average_error()
     #test_pollster_errors()
     #test_pivot_nested_dict()

@@ -5,12 +5,28 @@
 
 test_state_edges passes
 test_most_recent_poll_row passes
+unique_column_values passes
 
 Collaboration:
 
 	Sailor Jerry
+	Whoever gave me this rediculous cold
 
 Reflection:
 
-...
+I didn't finish this assignment. I worked on it over the weekend for far more than 6 hours total, and it's beyond frustrating. I'm sure that learning
+how to nest dictionaries and lists like this is valuable for doing really complex code down the line. (Or maybe it's not.) But I feel that if we were doing this
+assignment with classes/objects, it might be easier. I could be completely wrong, and I'm not really interested in trying to implement that to test it.
+I've been sick all weekend and trying to do problem solving is going nowhere.
 
+I went through some of my peers' github accounts for clues or hints on how to approach the problems, but it looks like most people didn't even get as far as I did,
+which while on one hand makes me feel a little bit better about having not finished the assignment, I also find it frustrating, because a lot of the time, when I can't
+figure out a way to solve a problem, seeing someone else's solution can help me build an understanding of what about my approach was correct, and what was wrong, and
+even some clever ways of tackling something.
+
+I have a hunch that if I implemented earlier functions in the assignment differently, it might have helped with some of the later functions. But again, having not
+designed the assignment, and not knowing exactly what each function was going to need as an input, my solutions are probably cludgy and lame.
+
+At least programming is fun for me, and I'll be able to enjoy doing it in my spare time throughout my life. But increasingly I've become skeptical about my innate
+abilities (lack thereof (especially with math)), and whether or not I'm cut out to find a career that involves this. That's OK though, because it can be a Way of Life
+without being a job. 

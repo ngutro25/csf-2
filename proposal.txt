@@ -1,11 +1,23 @@
+Proposal for Poetry Generating Python Script(s):
+
 This script will operate in two modes: vanilla, and Twitter. The vanilla mode will accept a text file, strip lines
 and words from those lines, count syllables for each word, and attempt to create a pseudo-haiku from them.
 There will be 3 haiku styles: 3/5/3 syllable count, 5/7/5 syllable count, and a free format which will have lines
 of varying length, but will maintain a total syllable count of 17 or less. This format is based on the 'American Haiku'
-format postulated by Jack Kerouac.
+format by Jack Kerouac.
+
+For Twitter mode, the program will either grab incoming public tweets from the Twitter firehose and process them,
+search the rest API (already created Tweets, not incoming), and process them, or filter potential tweets based on
+keywords, or hashtags.
+
+	Turns out there are a lot of posts on Twitter that wouldn't be great for poetry. Who would have thought?
+
+Writing this program will require me to become somewhat familiar with the Twitter API, the functions they use, as well
+as storing and parsing JSON data, and using file i/o to help manage and save the data I'm working with. I'll also have to
+either find someone else's code for syllable counting and modify it, or attempt to write my own.
 
 
-# PROPOSAL NOT FINISHED
+(Freewriting Notes, Ideas)
 
 # Twitter Haiku Generator
 
@@ -23,7 +35,7 @@ format postulated by Jack Kerouac.
 #   users to up or downvote haiku. Keep track of most popular haiku. This data can later be used for data
 #   mining, trend tracking, or machine learning.
 
-# Very ambitious, totally for later. Use vote data to teach the program to generate better haiku.
+# Very ambitious, totally for later: Use vote data to teach the program to generate better haiku.
 
 
 
@@ -50,7 +62,3 @@ format postulated by Jack Kerouac.
 #   generate anything someone might want to steal.
 
 # OPEN SOURCE! COMMUNITY DRIVEN! MINDFULNESS FOR THE DIGITAL ERA! FREE DATA AND POETRY FOR EVERYBODY!
-
-
-
-# Put project proposal here (Official, essay proposal to come soon)

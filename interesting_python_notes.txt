@@ -1,0 +1,5 @@
+
+- In Python 2.7x, the range() function creates a list to iterate over, [1, 2, 3, 4, 5, ... etc]. With big numbers, this is slow and clunky, there's actually a better function
+	xrange(), which does them all one at a time.
+
+	- In Python 3, range() went away, and xrange() became range(). Because xrange() is a gross function name.
